@@ -9,7 +9,7 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .container {
@@ -24,4 +24,9 @@ a {
 
 .row {
     margin: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
 }
