@@ -16,7 +16,15 @@
 
                 img {
                     width: 220px;
+                    transition: transform .3s;
+
+                    &:hover {
+                        transform: scale(150%);
+                    }
                 }
+
+
+
             }
 
             .product_title {
@@ -37,7 +45,7 @@
 
                     button {
                         margin-right: 20px;
-                        @include button($fs-l, $fw-6, $lh-29, $c-dark-1e, $bg-gray, 10px, none, none, $bg-gray, $c-dark-1e);
+                        @include button($fs-l, $fw-6, $lh-29, $c-dark-1e, $bg-gray-c, 10px, none, none, $bg-gray-c, $c-dark-1e);
                     }
                 }
 
@@ -51,7 +59,7 @@
                     margin-bottom: 10px;
 
                     button {
-                        @include button($fs-l, $fw-6, $lh-29, $c-dark-1e, $bg-gray, 10px 20px, none, none, $bg-gray, $c-dark-1e);
+                        @include button($fs-l, $fw-6, $lh-29, $c-dark-1e, $bg-blue, 10px 20px, none, none, $bg-pupble, $c-dark-1e);
 
                     }
 
@@ -61,7 +69,73 @@
                     }
                 }
 
-                button {}
+                button {
+                    @include button($fs-l, $fw-5, $lh-29, $c-white-f8, $bg-pupble, 10px 20px, none, none, rgba(62, 32, 248, 0.9), $c-white-f8);
+                }
+            }
+        }
+    }
+}
+
+.realate {
+    text-align: center;
+
+    .container {
+        h3 {
+            @include text($fs-2xl, $fw-4, $lh-48, $c-dark);
+        }
+
+        .realate_list {
+            .item {
+                margin: 10px 0;
+
+                .card {
+                    text-align: left;
+                    justify-content: space-between;
+                    // height: 370px;
+                    gap: 15px;
+
+                    img {
+                        width: 220px;
+                        margin: 0 auto;
+                    }
+
+                    .card_body {
+                        padding-left: 15px;
+
+                        h4 {
+                            @include text($fs-l, $fw-3, $lh-29, $c-dark);
+                        }
+
+                        p {
+                            @include text($fs-m, $fw-3, $lh-24, $c-gray-cb);
+                        }
+                    }
+
+                    .card_bottom {
+                        display: flex;
+                        justify-content: center;
+                        align-items: baseline;
+                        background: $bg-gray-de;
+
+                        button {
+                            width: 50%;
+                            @include button($fs-l, $fw-2, $lh-29, $c-dark, $bg-yew, 10px, none, none, $bg-gray-c, $c-dark);
+                        }
+
+                        p {
+                            width: 50%;
+                            text-align: center;
+                            @include text($fs-l, $fw-6, $lh-29, $c-dark);
+                        }
+                    }
+                }
+
+                transition: transform .3s;
+
+                &:hover {
+                    transform: scale(110%);
+                }
             }
         }
     }
