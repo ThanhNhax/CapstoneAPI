@@ -16,6 +16,9 @@ console.log(pd);
 
 window.onload = function () {
 
+    // const urlParams = new URLSearchParams(window.location.search);
+    // const myParam = urlParams.get('productid');
+    // console.log('params', myParam)
     let promise = axios({
         url: 'https://shop.cyberlearn.vn/api/Product/getbyid?id=6',
         method: 'GET',
