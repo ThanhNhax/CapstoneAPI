@@ -1,13 +1,5 @@
 // import { product } from "../models/product";
 
-// window.onload = function () {
-//     const urlParams = new URLSearchParams(window.location.search);
-//     const myParam = urlParams.get('productid');
-//     console.log('params', myParam)
-
-//     renderProduct();
-//     console.log(1);
-// }
 let renderProduct = () => {
     alert(124);
 }
