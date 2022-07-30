@@ -1,4 +1,4 @@
-function product() {
+export function product() {
     this.id = "";
     this.name = "";
     this.price = "";
