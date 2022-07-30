@@ -4,7 +4,7 @@ footer {
     .footer_top {
         padding-bottom: 50px;
 
-        .container {
+        .container-fluid {
             .footer_list {
                 .item {
                     h5 {
@@ -47,7 +47,10 @@ footer {
     }
 
     .footer_bottom {
-        .container {
+        .container-fluid {
+            background-color: $bg-gray-c;
+            padding: 20px 0;
+
             .footer_list {
                 .item {
                     h5 {

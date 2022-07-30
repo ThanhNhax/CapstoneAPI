@@ -12,6 +12,11 @@ a {
   text-decoration: none !important;
 }
 
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   width: 1280px;
   margin: 0 auto;
@@ -31,52 +36,52 @@ p {
   padding: 0;
 }
 
-header .container .header_top {
+header .container-fluid .header_top {
   background: #000;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-header .container .header_top .logo {
+header .container-fluid .header_top .logo {
   margin: 10px 0px 8px 0px;
   padding-left: 25px;
 }
-header .container .header_top .logo img {
+header .container-fluid .header_top .logo img {
   width: 116px;
   height: 32px;
 }
-header .container .header_top .header_right .content {
+header .container-fluid .header_top .header_right .content {
   display: flex;
   justify-content: flex-end;
   margin-right: 40px;
   align-items: center;
   gap: 20px;
 }
-header .container .header_top .header_right .content .shop img {
+header .container-fluid .header_top .header_right .content .shop img {
   width: 31px;
 }
-header .container .header_top .header_right .content .shop span {
+header .container-fluid .header_top .header_right .content .shop span {
   font-size: 30px;
   font-weight: 300;
   line-height: 36.31px;
   color: #fff;
 }
-header .container .header_top .header_right .content a {
+header .container-fluid .header_top .header_right .content a {
   text-decoration: none;
   font-size: 16px;
   font-weight: 300;
   line-height: 19.36px;
   color: #fff;
 }
-header .container nav {
+header .container-fluid nav {
   padding: 10px 0px 8px 25px;
   gap: 25px;
   background: #f5f5f5;
 }
-header .container nav .line1 {
+header .container-fluid nav .line1 {
   position: relative;
 }
-header .container nav .line1::before {
+header .container-fluid nav .line1::before {
   content: "";
   width: 100%;
   height: 0;
@@ -85,13 +90,13 @@ header .container nav .line1::before {
   background: #030303;
   border: 1px solid #000000;
 }
-header .container nav .nav-link {
+header .container-fluid nav .nav-link {
   font-size: 20px;
   font-weight: 400;
   line-height: 24.2px;
   color: #000;
 }
-header .container nav .nguoi {
+header .container-fluid nav .nguoi {
   opacity: 0.7;
 }
 
@@ -101,62 +106,66 @@ footer {
 footer .footer_top {
   padding-bottom: 50px;
 }
-footer .footer_top .container .footer_list .item h5 {
+footer .footer_top .container-fluid .footer_list .item h5 {
   font-size: 30px;
   font-weight: 700;
   line-height: 48.41px;
   color: #000;
 }
-footer .footer_top .container .footer_list .item .item-body {
+footer .footer_top .container-fluid .footer_list .item .item-body {
   display: flex;
   flex-direction: column;
 }
-footer .footer_top .container .footer_list .item .item-body a {
+footer .footer_top .container-fluid .footer_list .item .item-body a {
   margin: 5px 0;
   font-size: 20px;
   font-weight: 300;
   line-height: 24.2px;
   color: #000;
 }
-footer .footer_top .container .footer_list .item p {
+footer .footer_top .container-fluid .footer_list .item p {
   margin: 5px 0;
   font-size: 20px;
   font-weight: 300;
   line-height: 24.2px;
   color: #000;
 }
-footer .footer_top .container .footer_list .item .style_red {
+footer .footer_top .container-fluid .footer_list .item .style_red {
   font-size: 24px;
   font-weight: 700;
   line-height: 36.31px;
   color: #FC0303;
 }
-footer .footer_top .container .footer_list .item-br {
+footer .footer_top .container-fluid .footer_list .item-br {
   border-top-style: none;
   border-right-style: solid;
   border-bottom-style: none;
   border-left-style: solid;
   border-color: rgba(234, 235, 235, 0.7019607843);
 }
-footer .footer_bottom .container .footer_list .item h5 {
+footer .footer_bottom .container-fluid {
+  background-color: #CCCCCC;
+  padding: 20px 0;
+}
+footer .footer_bottom .container-fluid .footer_list .item h5 {
   font-size: 30px;
   font-weight: 700;
   line-height: 48.41px;
   color: #000;
 }
-footer .footer_bottom .container .footer_list .item p {
+footer .footer_bottom .container-fluid .footer_list .item p {
   font-size: 20px;
   font-weight: 300;
   line-height: 24.2px;
   color: #000;
 }
-footer .footer_bottom .container .footer_list .item a {
+footer .footer_bottom .container-fluid .footer_list .item a {
   font-size: 24px;
   font-weight: 700;
   line-height: 36.31px;
   color: #FC0303;
 }
-footer .footer_bottom .container .footer_list .item-br {
+footer .footer_bottom .container-fluid .footer_list .item-br {
   border-top-style: none;
   border-right-style: solid;
   border-bottom-style: none;
@@ -332,4 +341,59 @@ footer .footer_bottom .container .footer_list .item-br {
 }
 .realate .container .realate_list .item:hover {
   transform: scale(110%);
+}
+
+.regitster {
+  padding: 60px 0px;
+}
+.regitster .container h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48.41px;
+  color: #000;
+}
+.regitster .container #frm {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36.31px;
+  color: #000;
+}
+.regitster .container #frm .row .form-1 .frm-input {
+  display: block;
+  width: 100%;
+  border: none;
+  margin: 30px 0px;
+  border-bottom: 5px solid rgb(174, 24, 226);
+}
+.regitster .container #frm .row .form-2 input {
+  display: block;
+  width: 100%;
+  border: none;
+  margin: 30px 0px;
+  border-bottom: 5px solid rgb(174, 24, 226);
+}
+.regitster .container #frm .row .form-2 .row .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.regitster .container #frm .row .form-2 .row .row input {
+  display: block;
+  margin: 0;
+}
+.regitster .container #frm .row .form-2 button {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36.31px;
+  color: #fff;
+  background: #AE18E2;
+  padding: 10px 50px;
+  border: 1px solid;
+  border-radius: none;
+}
+.regitster .container #frm .row .form-2 button:hover {
+  background: #AE18E2;
+  color: #fff;
 }
