@@ -8,7 +8,7 @@ footer {
             .footer_list {
                 .item {
                     h5 {
-                        @include text($fs-xl, $fw-7, $lh-48, $c-dark);
+                        @include text($fs-l, $fw-7, $lh-48, $c-dark);
                     }
 
                     .item-body {
@@ -18,7 +18,7 @@ footer {
 
                         a {
                             margin: 5px 0;
-                            @include text($fs-m, $fw-3, $lh-24, $c-dark);
+                            @include text($fs-s, $fw-3, $lh-24, $c-dark);
 
                         }
                     }
@@ -26,12 +26,12 @@ footer {
                     p {
                         margin: 5px 0;
 
-                        @include text($fs-m, $fw-3, $lh-24, $c-dark);
+                        @include text($fs-s, $fw-3, $lh-24, $c-dark);
 
                     }
 
                     .style_red {
-                        @include text($fs-l, $fw-7, $lh-36, $c-red);
+                        @include text($fs-m, $fw-7, $lh-36, $c-red);
                     }
                 }
 
@@ -47,21 +47,24 @@ footer {
     }
 
     .footer_bottom {
+        background-color: $bg-gray-c;
+        padding: 20px 0;
+
         .container {
             .footer_list {
                 .item {
                     h5 {
-                        @include text($fs-xl, $fw-7, $lh-48, $c-dark);
+                        @include text($fs-l, $fw-7, $lh-48, $c-dark);
 
                     }
 
                     p {
-                        @include text($fs-m, $fw-3, $lh-24, $c-dark);
+                        @include text($fs-s, $fw-3, $lh-24, $c-dark);
 
                     }
 
                     a {
-                        @include text($fs-l, $fw-7, $lh-36, $c-red);
+                        @include text($fs-m, $fw-7, $lh-36, $c-red);
 
                     }
                 }
