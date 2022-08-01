@@ -49,40 +49,35 @@
             <form id="frm">
                 <div class="form-group row ">
                     <div class="form-1 col-6">
-                        <input type="email" class="frm-input iplay" placeholder="email">
-                        <input type="password" class="frm-input iplay" placeholder="password">
-                        <input type="password" class="frm-input " placeholder="password confirm">
+                        <input type="email" class="frm-input iplay" placeholder="email" id='email'>
+                        <input type="password" class="frm-input iplay" placeholder="password" id="password">
+                        <input type="password" class="frm-input " placeholder="password confirm" id="password_confirm">
                     </div>
                     <div class="form-2 col-6">
-                        <input type="text" class="frm-input iplay" placeholder="name">
-                        <input type="text" class="frm-input iplay" placeholder="phone">
+                        <input type="text" class="frm-input iplay" placeholder="name" id="name">
+                        <input type="text" class="frm-input iplay" placeholder="phone" id="phone">
                         <div class="row ">
-                            <div class="col-6 row">
-                                <p class="col-6">Gender</p>
-                                <input type="radio" name="gioiTinh" class="form-control col-6 iplay">
+                            <p>Gender:</p>
 
-                            </div>
-                            <div class="col-6 row">
-                                <input type="radio" name="gioiTinh" class="form-control col-6 ">
-                                <p class="col-6" p>Female</p>
-                            </div>
+                            <input type="radio" name="gioiTinh" class="form-control  iplay" id="gender" value="true"
+                                checked>
+                            <p>Male</p>
+
+
+                            <input type="radio" name="gioiTinh" class="form-control" value="false">
+                            <p>Female</p>
+
                         </div>
-                        <button class="btn btn-danger" id="btn_Submit">Submit</button>
-
+                        <input class="btn-submit" type="button" value="Submit">
                     </div>
                 </div>
             </form>
         </div>
     </section>
-    <style>
-        #frm .iplay {
-            background: red;
-        }
-    </style>
     <!-- Footer -->
     <footer>
         <div class="footer_top">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="footer_list row">
                     <div class="item col-4">
                         <h5>GET HELP</h5>
@@ -113,7 +108,7 @@
         </div>
         </div>
         <div class="footer_bottom">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="footer_list row">
                     <div class="item col-4">
                         <h5>EMAIL SIGN UP</h5>
@@ -145,6 +140,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="../controllers/regitster.js"></script>
 </body>
 
