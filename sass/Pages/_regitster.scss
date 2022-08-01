@@ -1,5 +1,4 @@
 .regitster {
-    // background: $bg-gray-c ;
     padding: 60px 0px;
 
     .container {
@@ -33,26 +32,26 @@
                     }
 
                     .row {
-                        .row {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                        display: flex;
+                        flex-wrap: nowrap !important;
+                        align-items: center !important;
 
-                            p {}
+                        p {
+                            @include text ($fs-xl, $fw-4, $lh-36, $c-dark);
+                        }
 
-                            input {
-                                display: block;
-                                margin: 0;
-                            }
-
+                        input {
+                            display: block;
+                            margin: 0;
                         }
 
                     }
 
-                    button {
-                        margin-top: 20px;
-                        @include button ($fs-xl, $fw-4, $lh-36, $c-white, $bg-pupble-ae, 10px 50px, 1px solid, none, $bg-pupble-ae, $c-white );
-                    }
+                }
+
+                .btn-submit {
+                    width: 35% !important;
+                    @include button ($fs-xl, $fw-4, $lh-36, $c-white, $bg-pupble-ae, 10px 50px, 1px solid, none, $bg-pupble-ae, $c-white );
                 }
             }
         }

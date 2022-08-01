@@ -106,66 +106,66 @@ footer {
 footer .footer_top {
   padding-bottom: 50px;
 }
-footer .footer_top .container-fluid .footer_list .item h5 {
-  font-size: 30px;
+footer .footer_top .container .footer_list .item h5 {
+  font-size: 24px;
   font-weight: 700;
   line-height: 48.41px;
   color: #000;
 }
-footer .footer_top .container-fluid .footer_list .item .item-body {
+footer .footer_top .container .footer_list .item .item-body {
   display: flex;
   flex-direction: column;
 }
-footer .footer_top .container-fluid .footer_list .item .item-body a {
+footer .footer_top .container .footer_list .item .item-body a {
   margin: 5px 0;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 24.2px;
   color: #000;
 }
-footer .footer_top .container-fluid .footer_list .item p {
+footer .footer_top .container .footer_list .item p {
   margin: 5px 0;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 24.2px;
   color: #000;
 }
-footer .footer_top .container-fluid .footer_list .item .style_red {
-  font-size: 24px;
+footer .footer_top .container .footer_list .item .style_red {
+  font-size: 20px;
   font-weight: 700;
   line-height: 36.31px;
   color: #FC0303;
 }
-footer .footer_top .container-fluid .footer_list .item-br {
+footer .footer_top .container .footer_list .item-br {
   border-top-style: none;
   border-right-style: solid;
   border-bottom-style: none;
   border-left-style: solid;
   border-color: rgba(234, 235, 235, 0.7019607843);
 }
-footer .footer_bottom .container-fluid {
+footer .footer_bottom {
   background-color: #CCCCCC;
   padding: 20px 0;
 }
-footer .footer_bottom .container-fluid .footer_list .item h5 {
-  font-size: 30px;
+footer .footer_bottom .container .footer_list .item h5 {
+  font-size: 24px;
   font-weight: 700;
   line-height: 48.41px;
   color: #000;
 }
-footer .footer_bottom .container-fluid .footer_list .item p {
-  font-size: 20px;
+footer .footer_bottom .container .footer_list .item p {
+  font-size: 16px;
   font-weight: 300;
   line-height: 24.2px;
   color: #000;
 }
-footer .footer_bottom .container-fluid .footer_list .item a {
-  font-size: 24px;
+footer .footer_bottom .container .footer_list .item a {
+  font-size: 20px;
   font-weight: 700;
   line-height: 36.31px;
   color: #FC0303;
 }
-footer .footer_bottom .container-fluid .footer_list .item-br {
+footer .footer_bottom .container .footer_list .item-br {
   border-top-style: none;
   border-right-style: solid;
   border-bottom-style: none;
@@ -373,17 +373,23 @@ footer .footer_bottom .container-fluid .footer_list .item-br {
   margin: 30px 0px;
   border-bottom: 5px solid rgb(174, 24, 226);
 }
-.regitster .container #frm .row .form-2 .row .row {
+.regitster .container #frm .row .form-2 .row {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
 }
-.regitster .container #frm .row .form-2 .row .row input {
+.regitster .container #frm .row .form-2 .row p {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36.31px;
+  color: #000;
+}
+.regitster .container #frm .row .form-2 .row input {
   display: block;
   margin: 0;
 }
-.regitster .container #frm .row .form-2 button {
-  margin-top: 20px;
+.regitster .container #frm .row .btn-submit {
+  width: 35% !important;
   font-size: 30px;
   font-weight: 400;
   line-height: 36.31px;
@@ -393,7 +399,7 @@ footer .footer_bottom .container-fluid .footer_list .item-br {
   border: 1px solid;
   border-radius: none;
 }
-.regitster .container #frm .row .form-2 button:hover {
+.regitster .container #frm .row .btn-submit:hover {
   background: #AE18E2;
   color: #fff;
 }
