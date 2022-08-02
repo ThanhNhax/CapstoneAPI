@@ -9,25 +9,24 @@
 //     console.log(1);
 // }
 let renderProduct = () => {
-    alert(124);
-}
+  alert(124);
+};
 let pd = new product();
 console.log(pd);
 
 window.onload = function () {
+  let promise = axios({
+    url: "https://shop.cyberlearn.vn/api/Product/getbyid?id=6",
+    method: "GET",
+  });
 
-    let promise = axios({
-        url: 'https://shop.cyberlearn.vn/api/Product/getbyid?id=6',
-        method: 'GET',
-    });
-
-    //Xử lý thành công
-    promise.then(function (result) {
-        let pd = result.data.content;
-        // let relatedProducts = result.data.content;
-        console.log('relatedProducts', pd.relatedProducts);
-        console.log("pd", pd);
-        let htmlProduct = `
+  //Xử lý thành công
+  promise.then(function (result) {
+    let pd = result.data.content;
+    // let relatedProducts = result.data.content;
+    console.log("relatedProducts", pd.relatedProducts);
+    console.log("pd", pd);
+    let htmlProduct = `
             <div class="container">
                 <div class="row">
                     <div class="product_img col-4" id="image">
@@ -53,20 +52,20 @@ window.onload = function () {
 
         `;
 
-        document.querySelector('.product').innerHTML = htmlProduct;
-        let arrSize = pd.size;
-        let htmlBtn = '';
-        for (let key of arrSize) {
-            htmlBtn += `
+    document.querySelector(".product").innerHTML = htmlProduct;
+    let arrSize = pd.size;
+    let htmlBtn = "";
+    for (let key of arrSize) {
+      htmlBtn += `
             <button>${key}</button>
             `;
-        }
-        document.querySelector("#btn").innerHTML = htmlBtn;
-        /*tạo layouts chp realatesProduct */
-        let htmlRealateProduct = '';
-        for (const key of pd.relatedProducts) {
-            console.log("key", key);
-            htmlRealateProduct += `
+    }
+    document.querySelector("#btn").innerHTML = htmlBtn;
+    /*tạo layouts chp realatesProduct */
+    let htmlRealateProduct = "";
+    for (const key of pd.relatedProducts) {
+      console.log("key", key);
+      htmlRealateProduct += `
             <div class="item col-4">
                     <div class="card ">
                         <img src="${key.image}" alt="">
@@ -84,11 +83,11 @@ window.onload = function () {
             
             
             `;
-        }
-        document.querySelector(".realate_list").innerHTML = htmlRealateProduct;
-    });
-    //Xử lý thất bại
-    promise.catch(function (error) {
-        console.log(error);
-    });
-}
+    }
+    document.querySelector(".realate_list").innerHTML = htmlRealateProduct;
+  });
+  //Xử lý thất bại
+  promise.catch(function (error) {
+    console.log(error);
+  });
+};
