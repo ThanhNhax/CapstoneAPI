@@ -1,13 +1,5 @@
-// import { product } from "../models/product";
+import { product } from "../models/product.js";
 
-// window.onload = function () {
-//     const urlParams = new URLSearchParams(window.location.search);
-//     const myParam = urlParams.get('productid');
-//     console.log('params', myParam)
-
-//     renderProduct();
-//     console.log(1);
-// }
 let renderProduct = () => {
   alert(124);
 };
@@ -20,6 +12,7 @@ window.onload = function () {
     method: "GET",
   });
 
+
   //Xử lý thành công
   promise.then(function (result) {
     let pd = result.data.content;
@@ -27,6 +20,23 @@ window.onload = function () {
     console.log("relatedProducts", pd.relatedProducts);
     console.log("pd", pd);
     let htmlProduct = `
+
+    // const urlParams = new URLSearchParams(window.location.search);
+    // const myParam = urlParams.get('productid');
+    // console.log('params', myParam)
+    let promise = axios({
+        url: 'https://shop.cyberlearn.vn/api/Product/getbyid?id=6',
+        method: 'GET',
+    });
+
+    //Xử lý thành công
+    promise.then(function (result) {
+        let pd = result.data.content;
+        // let relatedProducts = result.data.content;
+        console.log('relatedProducts', pd.relatedProducts);
+        console.log("pd", pd);
+        let htmlProduct = `
+
             <div class="container">
                 <div class="row">
                     <div class="product_img col-4" id="image">
