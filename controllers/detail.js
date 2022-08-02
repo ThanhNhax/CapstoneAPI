@@ -1,42 +1,22 @@
 import { product } from "../models/product.js";
 
-let renderProduct = () => {
-  alert(124);
-};
-let pd = new product();
-console.log(pd);
-
 window.onload = function () {
-  let promise = axios({
-    url: "https://shop.cyberlearn.vn/api/Product/getbyid?id=6",
-    method: "GET",
-  });
 
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParam = urlParams.get('productid');
+  console.log('params', myParam)
+  let promise = axios({
+    url: 'https://shop.cyberlearn.vn/api/Product/getbyid?id=' + myParam,
+    method: 'GET',
+  });
 
   //Xử lý thành công
   promise.then(function (result) {
     let pd = result.data.content;
     // let relatedProducts = result.data.content;
-    console.log("relatedProducts", pd.relatedProducts);
+    console.log('relatedProducts', pd.relatedProducts);
     console.log("pd", pd);
     let htmlProduct = `
-
-    // const urlParams = new URLSearchParams(window.location.search);
-    // const myParam = urlParams.get('productid');
-    // console.log('params', myParam)
-    let promise = axios({
-        url: 'https://shop.cyberlearn.vn/api/Product/getbyid?id=6',
-        method: 'GET',
-    });
-
-    //Xử lý thành công
-    promise.then(function (result) {
-        let pd = result.data.content;
-        // let relatedProducts = result.data.content;
-        console.log('relatedProducts', pd.relatedProducts);
-        console.log("pd", pd);
-        let htmlProduct = `
-
             <div class="container">
                 <div class="row">
                     <div class="product_img col-4" id="image">
@@ -84,7 +64,9 @@ window.onload = function () {
                             <p>${key.description}</p>
                         </div>
                         <div class="card_bottom ">
-                            <button>Buy now</button>
+                            <a href="./detail.html?productid=${key.id}">    
+                              <button>Buy now</button>
+                            </a>
                             <p>85$</p>
                         </div>
                     </div>

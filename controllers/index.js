@@ -32,7 +32,7 @@ function renderProduct(arrProduct) {
                 <p>${pro.description}</p>
             </div>
             <div class="card-bottom ">
-               <a class="btn btn-buy href="./detail.html?productid=${pro.id}">Buy now</a>
+               <a class="btn btn-buy" href="./detail.html?productid=${pro.id}">Buy now</a>
                 <p>85$</p>
             </div>
         </div>

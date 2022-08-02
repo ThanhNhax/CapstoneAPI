@@ -313,11 +313,14 @@ footer .footer_bottom .container .footer_list .item-br {
 .realate .container .realate_list .item .card .card_bottom {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   background: #DEDDDC;
 }
-.realate .container .realate_list .item .card .card_bottom button {
+.realate .container .realate_list .item .card .card_bottom a {
   width: 50%;
+}
+.realate .container .realate_list .item .card .card_bottom a button {
+  width: 100%;
   font-size: 24px;
   font-weight: 200;
   line-height: 29.05px;
@@ -327,7 +330,7 @@ footer .footer_bottom .container .footer_list .item-br {
   border: none;
   border-radius: none;
 }
-.realate .container .realate_list .item .card .card_bottom button:hover {
+.realate .container .realate_list .item .card .card_bottom a button:hover {
   background: #CCCCCC;
   color: #000;
 }
