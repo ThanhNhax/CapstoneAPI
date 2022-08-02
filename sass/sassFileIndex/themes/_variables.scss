@@ -1,0 +1,67 @@
+//Khai báo biến
+// font size
+$fs-s: 16px;
+$fs-m: 20px;
+$fs-l: 24px;
+$fs-xl: 30px;
+$fs-2xl: 40px;
+
+//font-weight
+$fw-2: 200;
+$fw-3: 300;
+$fw-4: 400;
+$fw-5: 500;
+$fw-6: 600;
+$fw-7: 700;
+
+//line height
+$lh-19: 19.36px;
+$lh-24: 24.2px;
+$lh-29: 29.05px;
+$lh-36: 36.31px;
+$lh-48: 48.41px;
+
+//color
+$c-white: #fff;
+$c-white-f6: #f6f6f6;
+$c-white-f8: #fff8f8;
+$c-dark: #000;
+$c-dark-14: #140101;
+$c-dark-1e: #1e1d1d;
+$c-1e: #1ed90e;
+$c-red: #fc0303;
+$c-gray-cb: #cbc9c9;
+// bg
+$bg-dark: #000;
+$bg-blue: linear-gradient(180deg, #6181f3 0%, #7c97f5 99.48%);
+$bg-pupble: linear-gradient(
+  270deg,
+  rgba(62, 32, 248, 0.9) 5.14%,
+  #d017ee 89.71%
+);
+$bg-yew: #e1b067;
+$bg-white-f5: #f5f5f5;
+$bg-white-f8: #f8f8f8;
+$bg-gray-c: #cccccc;
+$bg-gray-de: #dedddc;
+$bg-gray-c2: #f8f8f8;
+// text
+@mixin text($fs: $fs-m, $fw: $fw-regular, $lh: $lh-2, $c: $text-c19-den) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  color: $c;
+}
+
+@mixin button($fs, $fw, $lh, $c, $bg, $pd, $bd, $br, $bg-hover, $c-hover) {
+  @include text($fs, $fw, $lh, $c);
+  background: $bg;
+  padding: $pd;
+  border: $bd;
+  border-radius: $br;
+
+  &:hover {
+    background: $bg-hover;
+    color: $c-hover;
+  }
+}
