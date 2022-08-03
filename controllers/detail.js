@@ -4,7 +4,8 @@ window.onload = function () {
 
   const urlParams = new URLSearchParams(window.location.search);
   const myParam = urlParams.get('productid');
-  console.log('params', myParam)
+  // console.log('params', myParam)
+  //Gọi API
   let promise = axios({
     url: 'https://shop.cyberlearn.vn/api/Product/getbyid?id=' + myParam,
     method: 'GET',
@@ -13,10 +14,22 @@ window.onload = function () {
   //Xử lý thành công
   promise.then(function (result) {
     let pd = result.data.content;
-    // let relatedProducts = result.data.content;
-    console.log('relatedProducts', pd.relatedProducts);
-    console.log("pd", pd);
-    let htmlProduct = `
+    // console.log('relatedProducts', pd.relatedProducts);
+    // console.log("pd", pd);
+    renderProduct(pd);
+    //Tạo button Size giày
+    let arrSize = pd.size;
+    renderButtuonSize(arrSize);
+    /*tạo layouts cho realatesProduct */
+    renderRealatesProduct(pd.relatedProducts);
+  });
+  //Xử lý thất bại
+  promise.catch(function (error) {
+    console.log(error);
+  });
+};
+let renderProduct = (pd) => {
+  let htmlProduct = `
             <div class="container">
                 <div class="row">
                     <div class="product_img col-4" id="image">
@@ -29,10 +42,10 @@ window.onload = function () {
                     <div id="btn">
 
                     </div>
-                    <h4>${pd.price}</h4>
+                    <h4>${pd.price}$</h4>
                     <div class="so_luong">
                         <button>+</button>
-                        <span>1</span>
+                        <span> 1 </span>
                         <button>-</button>
                     </div>
                     <button>Add to cart</button>
@@ -41,45 +54,38 @@ window.onload = function () {
         </div>
 
         `;
-
-    document.querySelector(".product").innerHTML = htmlProduct;
-    let arrSize = pd.size;
-    let htmlBtn = "";
-    for (let key of arrSize) {
-      htmlBtn += `
+  document.querySelector(".product").innerHTML = htmlProduct;
+}
+let renderButtuonSize = (arr) => {
+  let htmlBtn = "";
+  for (let key of arr) {
+    htmlBtn += `
             <button>${key}</button>
             `;
-    }
-    document.querySelector("#btn").innerHTML = htmlBtn;
-    /*tạo layouts chp realatesProduct */
-    let htmlRealateProduct = "";
-    for (const key of pd.relatedProducts) {
-      console.log("key", key);
-      htmlRealateProduct += `
+  }
+  document.querySelector("#btn").innerHTML = htmlBtn;
+}
+let renderRealatesProduct = (arr) => {
+  let htmlRealateProduct = "";
+  for (let key of arr) {
+    console.log("key", key);
+    htmlRealateProduct += `
             <div class="item col-4">
                     <div class="card ">
                         <img src="${key.image}" alt="">
                         <div class="card_body">
                             <h4>${key.name}</h4>
-                            <p>${key.description}</p>
+                            <p>${key.shortDescription}</p>
                         </div>
                         <div class="card_bottom ">
                             <a href="./detail.html?productid=${key.id}">    
                               <button>Buy now</button>
                             </a>
-                            <p>85$</p>
+                            <p>${key.price}$</p>
                         </div>
                     </div>
                 </div>
-            
-            
-            
             `;
-    }
-    document.querySelector(".realate_list").innerHTML = htmlRealateProduct;
-  });
-  //Xử lý thất bại
-  promise.catch(function (error) {
-    console.log(error);
-  });
-};
+  }
+  document.querySelector(".realate_list").innerHTML = htmlRealateProduct;
+}

@@ -29,11 +29,11 @@ function renderProduct(arrProduct) {
             <img src="${pro.image}" alt="...">
             <div class="card-body">
                 <h4>${pro.name}</h4>
-                <p>${pro.description}</p>
+                <p>${pro.shortDescription}</p>
             </div>
             <div class="card-bottom ">
                <a class="btn btn-buy" href="./detail.html?productid=${pro.id}">Buy now</a>
-                <p>85$</p>
+                <p>${pro.price}$</p>
             </div>
         </div>
     </div>
