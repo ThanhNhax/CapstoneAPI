@@ -50,14 +50,15 @@ document.querySelector(".btn-submit").onclick = () => {
     //Xử lý thành công 
     promise.then(function (result) {
         console.log('result', result.data.content);
-        //gọi lại api load lại table
-        // getProductApi();
+
     });
 
 
     //Xử lý thất bại
     promise.catch(function (error) {
-        console.log('error', error.response.data);
+        // console.log('error', error.response.data);
+        let commit = error.response.data.message;
+        alert(commit);
     })
 }
 let kiemTraEmail = (value) => {
