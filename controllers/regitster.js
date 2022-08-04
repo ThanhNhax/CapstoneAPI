@@ -23,7 +23,7 @@ document.querySelector(".btn-submit").onclick = () => {
     let passwordConfirm = arrInput[2].value;
     let name = arrInput[3].value;
     let phone = arrInput[4].value;
-    console.log(email, name);
+    // console.log(email, name);
     if (email == "" || password == "" || passwordConfirm == "" || name == "" || phone == "") {
         alert("Điền đầy đủ các trường dữ liệu !!");
         return;
@@ -49,8 +49,8 @@ document.querySelector(".btn-submit").onclick = () => {
 
     //Xử lý thành công 
     promise.then(function (result) {
-        console.log('result', result.data.content);
-
+        // console.log('result', result.data.content);
+        alert('Thành công!!!');
     });
 
 
