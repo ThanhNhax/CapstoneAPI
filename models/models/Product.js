@@ -2,6 +2,6 @@ function Product() {
   this.id = "";
   this.name = "";
   this.price = "";
-  this.desc = "";
+  this.quantity = "";
   this.img = "";
 }
